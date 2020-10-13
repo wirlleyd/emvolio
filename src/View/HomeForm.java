@@ -5,6 +5,7 @@
  */
 package View;
 
+import Helper.CurrentUser;
 import java.awt.Color;
 import javax.swing.JPanel;
 
@@ -17,6 +18,7 @@ public class HomeForm extends javax.swing.JFrame {
     
     public HomeForm() {
         initComponents();
+        usernameLabel.setText(CurrentUser.user);
         openPanel = menuPrincipalPanel;
     }
 

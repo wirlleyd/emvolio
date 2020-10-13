@@ -5,6 +5,7 @@
  */
 package View;
 
+import Helper.CurrentUser;
 import Model.Login;
 import ModelDAO.LoginDAO;
 import java.sql.SQLException;
@@ -121,6 +122,7 @@ public class LoginForm extends javax.swing.JFrame {
             Logger.getLogger(LoginForm.class.getName()).log(Level.SEVERE, null, ex);
         }
         if (login.getId() != null) {
+            new CurrentUser(txt_id.getText());
             HomeForm frm = new HomeForm();
             frm.setVisible(true);
             this.hide();
