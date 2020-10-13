@@ -109,4 +109,26 @@ public class VacinaDAO {
         return vacinas;
     }
     
+     public ArrayList<Vacina> getByNome(String nome) throws ClassNotFoundException, SQLException {
+        Connection conn = DataBase.getConnection();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Vacina> vacinas = new ArrayList<>();
+        stmt = conn.prepareStatement("SELECT * FROM Vacina WHERE nome LIKE ?");
+        stmt.setString(1, "%" + nome + "%");
+        rs = stmt.executeQuery();
+        while (rs.next()) {
+            Vacina v = new Vacina();
+            v.setId_vacina(rs.getInt("id_vacina"));
+            v.setNome(rs.getString("nome"));
+            v.setQuantidade(rs.getInt("quantidade"));
+            v.setObservacoes(rs.getString("observacoes"));
+            vacinas.add(v);
+        }
+        DataBase.closeConnection(conn, stmt, rs);
+        return vacinas;
+    }
+    
+    
+    
 }

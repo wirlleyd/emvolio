@@ -100,13 +100,36 @@ public class PacienteDAO {
         return pacientes;
     }
     
-    public ArrayList<Paciente> getByCpf(int cpf) throws ClassNotFoundException, SQLException {
+    public ArrayList<Paciente> getByCpf(String cpf) throws ClassNotFoundException, SQLException {
         Connection conn = DataBase.getConnection();
         PreparedStatement stmt = null;
         ResultSet rs = null;
         ArrayList<Paciente> pacientes = new ArrayList<>();
         stmt = conn.prepareStatement("SELECT * FROM PACIENTE WHERE cpf = ?");
-        stmt.setInt(1, cpf);
+        stmt.setString(1, cpf);
+        rs = stmt.executeQuery();
+        while (rs.next()) {
+            Paciente p = new Paciente();
+            p.setId_paciente(rs.getInt("id_paciente"));
+            p.setNome(rs.getString("nome"));
+            p.setCidade(rs.getString("cidade"));
+            p.setRua(rs.getString("rua"));
+            p.setComplemento(rs.getString("complemento"));
+            p.setData_nasc(rs.getString("data_nascimento"));
+            p.setCpf(rs.getString("cpf"));
+            pacientes.add(p);
+        }
+        DataBase.closeConnection(conn, stmt, rs);
+        return pacientes;
+    }
+    
+     public ArrayList<Paciente> getByName(String name) throws ClassNotFoundException, SQLException {
+        Connection conn = DataBase.getConnection();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Paciente> pacientes = new ArrayList<>();
+        stmt = conn.prepareStatement("SELECT * FROM paciente WHERE nome LIKE ?");
+        stmt.setString(1, "%" + name + "%");
         rs = stmt.executeQuery();
         while (rs.next()) {
             Paciente p = new Paciente();

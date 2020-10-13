@@ -67,14 +67,14 @@ public class VacinasForm extends javax.swing.JFrame {
         jScrollPane = new javax.swing.JScrollPane();
         observacoesTextArea = new javax.swing.JTextArea();
         titleLabel = new javax.swing.JLabel();
-        cancelarButton = new javax.swing.JPanel();
-        cancelarLabel = new javax.swing.JLabel();
         novoButton = new javax.swing.JPanel();
         novoLabel = new javax.swing.JLabel();
         removerButton = new javax.swing.JPanel();
         removerLabel = new javax.swing.JLabel();
         salvarButton = new javax.swing.JPanel();
         salvarLabel = new javax.swing.JLabel();
+        cancelarButton = new javax.swing.JPanel();
+        cancelarLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -115,9 +115,7 @@ public class VacinasForm extends javax.swing.JFrame {
         procurarIdPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         procurarIdPanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 350, -1));
 
-        procurarIdTextField.setBackground(new java.awt.Color(32, 33, 35));
         procurarIdTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        procurarIdTextField.setForeground(new java.awt.Color(255, 255, 255));
         procurarIdTextField.setToolTipText("");
         procurarIdTextField.setBorder(null);
         procurarIdTextField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -126,7 +124,7 @@ public class VacinasForm extends javax.swing.JFrame {
                 procurarIdTextFieldActionPerformed(evt);
             }
         });
-        procurarIdPanel.add(procurarIdTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 30, 350, 30));
+        procurarIdPanel.add(procurarIdTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 320, 30));
 
         procurarIdLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         procurarIdLabel.setForeground(new java.awt.Color(57, 113, 117));
@@ -213,9 +211,7 @@ public class VacinasForm extends javax.swing.JFrame {
         idPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         idPanel.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 350, -1));
 
-        idTextField.setBackground(new java.awt.Color(32, 33, 35));
         idTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        idTextField.setForeground(new java.awt.Color(255, 255, 255));
         idTextField.setToolTipText("");
         idTextField.setBorder(null);
         idTextField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -225,7 +221,7 @@ public class VacinasForm extends javax.swing.JFrame {
                 idTextFieldActionPerformed(evt);
             }
         });
-        idPanel.add(idTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 30, 350, 30));
+        idPanel.add(idTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 120, 30));
 
         idLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         idLabel.setForeground(new java.awt.Color(57, 113, 117));
@@ -238,9 +234,7 @@ public class VacinasForm extends javax.swing.JFrame {
         nomePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         nomePanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 350, -1));
 
-        nomeTextField.setBackground(new java.awt.Color(32, 33, 35));
         nomeTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        nomeTextField.setForeground(new java.awt.Color(255, 255, 255));
         nomeTextField.setToolTipText("");
         nomeTextField.setBorder(null);
         nomeTextField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -249,7 +243,7 @@ public class VacinasForm extends javax.swing.JFrame {
                 nomeTextFieldActionPerformed(evt);
             }
         });
-        nomePanel.add(nomeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 30, 350, 30));
+        nomePanel.add(nomeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 350, 30));
 
         nomeLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         nomeLabel.setForeground(new java.awt.Color(57, 113, 117));
@@ -260,11 +254,9 @@ public class VacinasForm extends javax.swing.JFrame {
 
         quantidadePanel.setBackground(new java.awt.Color(32, 33, 35));
         quantidadePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        quantidadePanel.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 152, -1));
+        quantidadePanel.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 150, -1));
 
-        quantidadeTextField.setBackground(new java.awt.Color(32, 33, 35));
         quantidadeTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        quantidadeTextField.setForeground(new java.awt.Color(255, 255, 255));
         quantidadeTextField.setToolTipText("");
         quantidadeTextField.setBorder(null);
         quantidadeTextField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -273,7 +265,7 @@ public class VacinasForm extends javax.swing.JFrame {
                 quantidadeTextFieldActionPerformed(evt);
             }
         });
-        quantidadePanel.add(quantidadeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 30, 150, 30));
+        quantidadePanel.add(quantidadeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 150, 30));
 
         quantidadeLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         quantidadeLabel.setForeground(new java.awt.Color(57, 113, 117));
@@ -302,35 +294,6 @@ public class VacinasForm extends javax.swing.JFrame {
         titleLabel.setForeground(new java.awt.Color(242, 242, 242));
         titleLabel.setText("Vacina");
         jPanel2.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, -1, -1));
-
-        cancelarButton.setBackground(new java.awt.Color(229, 90, 90));
-        cancelarButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        cancelarButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cancelarButtonMouseClicked(evt);
-            }
-        });
-
-        cancelarLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        cancelarLabel.setForeground(new java.awt.Color(247, 247, 247));
-        cancelarLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cancelarLabel.setText("Voltar");
-
-        javax.swing.GroupLayout cancelarButtonLayout = new javax.swing.GroupLayout(cancelarButton);
-        cancelarButton.setLayout(cancelarButtonLayout);
-        cancelarButtonLayout.setHorizontalGroup(
-            cancelarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cancelarButtonLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(cancelarLabel)
-                .addContainerGap(29, Short.MAX_VALUE))
-        );
-        cancelarButtonLayout.setVerticalGroup(
-            cancelarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cancelarLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(cancelarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 630, 120, 50));
 
         novoButton.setBackground(new java.awt.Color(42, 44, 44));
         novoButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -422,6 +385,35 @@ public class VacinasForm extends javax.swing.JFrame {
         );
 
         jPanel2.add(salvarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 630, 130, 50));
+
+        cancelarButton.setBackground(new java.awt.Color(229, 90, 90));
+        cancelarButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        cancelarButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cancelarButtonMouseClicked(evt);
+            }
+        });
+
+        cancelarLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        cancelarLabel.setForeground(new java.awt.Color(247, 247, 247));
+        cancelarLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cancelarLabel.setText("Voltar");
+
+        javax.swing.GroupLayout cancelarButtonLayout = new javax.swing.GroupLayout(cancelarButton);
+        cancelarButton.setLayout(cancelarButtonLayout);
+        cancelarButtonLayout.setHorizontalGroup(
+            cancelarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cancelarButtonLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(cancelarLabel)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+        cancelarButtonLayout.setVerticalGroup(
+            cancelarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cancelarLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(cancelarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 630, -1, 50));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 710));
 

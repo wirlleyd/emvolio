@@ -50,8 +50,6 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         titleLabel = new javax.swing.JLabel();
-        cancelarButton = new javax.swing.JPanel();
-        cancelarLabel = new javax.swing.JLabel();
         pacientePanel = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         pacienteTextField = new javax.swing.JTextField();
@@ -70,8 +68,6 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
         pacienteTable = new javax.swing.JTable();
         VacinaScrollPane = new javax.swing.JScrollPane();
         vacinasTable = new javax.swing.JTable();
-        aplicarButton = new javax.swing.JPanel();
-        aplicarLabel = new javax.swing.JLabel();
         procurarButton1 = new javax.swing.JPanel();
         procurarLabel1 = new javax.swing.JLabel();
         idPanel = new javax.swing.JPanel();
@@ -79,9 +75,13 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
         idLabel = new javax.swing.JLabel();
         idTextField = new javax.swing.JTextField();
         comentariosPanel = new javax.swing.JPanel();
-        comentariosLabel = new javax.swing.JLabel();
         comentariosScrollPane = new javax.swing.JScrollPane();
         comentariosTextArea = new javax.swing.JTextArea();
+        cancelarButton = new javax.swing.JPanel();
+        cancelarLabel = new javax.swing.JLabel();
+        aplicarButton = new javax.swing.JPanel();
+        aplicarLabel = new javax.swing.JLabel();
+        comentariosLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -94,41 +94,11 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
         titleLabel.setText("Aplicar Vacina");
         jPanel1.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, -1, -1));
 
-        cancelarButton.setBackground(new java.awt.Color(229, 90, 90));
-        cancelarButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-
-        cancelarLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        cancelarLabel.setForeground(new java.awt.Color(247, 247, 247));
-        cancelarLabel.setText("Voltar");
-        cancelarLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cancelarLabelMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout cancelarButtonLayout = new javax.swing.GroupLayout(cancelarButton);
-        cancelarButton.setLayout(cancelarButtonLayout);
-        cancelarButtonLayout.setHorizontalGroup(
-            cancelarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cancelarButtonLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(cancelarLabel)
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-        cancelarButtonLayout.setVerticalGroup(
-            cancelarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cancelarLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(cancelarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, 50));
-
         pacientePanel.setBackground(new java.awt.Color(32, 33, 35));
         pacientePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pacientePanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 350, -1));
+        pacientePanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 320, -1));
 
-        pacienteTextField.setBackground(new java.awt.Color(32, 33, 35));
         pacienteTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        pacienteTextField.setForeground(new java.awt.Color(255, 255, 255));
         pacienteTextField.setToolTipText("");
         pacienteTextField.setBorder(null);
         pacienteTextField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -138,7 +108,7 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
                 pacienteTextFieldActionPerformed(evt);
             }
         });
-        pacientePanel.add(pacienteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 30, 350, 30));
+        pacientePanel.add(pacienteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 322, 30));
 
         pacienteLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         pacienteLabel.setForeground(new java.awt.Color(57, 113, 117));
@@ -153,12 +123,10 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
 
         cpfLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         cpfLabel.setForeground(new java.awt.Color(57, 113, 117));
-        cpfLabel.setText("CPF:");
+        cpfLabel.setText("CPF/NOME:");
         cpfPanel.add(cpfLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
-        cpfTextField1.setBackground(new java.awt.Color(32, 33, 35));
         cpfTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cpfTextField1.setForeground(new java.awt.Color(255, 255, 255));
         cpfTextField1.setToolTipText("");
         cpfTextField1.setBorder(null);
         cpfTextField1.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -167,7 +135,7 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
                 cpfTextField1ActionPerformed(evt);
             }
         });
-        cpfPanel.add(cpfTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 30, 350, 30));
+        cpfPanel.add(cpfTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 322, 30));
 
         jPanel1.add(cpfPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 330, -1));
 
@@ -210,9 +178,7 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
         vacinaLabel.setText("Vacina:");
         vacinaPanel.add(vacinaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
-        vacinaTextField1.setBackground(new java.awt.Color(32, 33, 35));
         vacinaTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        vacinaTextField1.setForeground(new java.awt.Color(255, 255, 255));
         vacinaTextField1.setToolTipText("");
         vacinaTextField1.setBorder(null);
         vacinaTextField1.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -222,7 +188,7 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
                 vacinaTextField1ActionPerformed(evt);
             }
         });
-        vacinaPanel.add(vacinaTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 350, 30));
+        vacinaPanel.add(vacinaTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 320, 30));
 
         jPanel1.add(vacinaPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 110, 330, -1));
 
@@ -270,7 +236,7 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
         });
         PacienteScrollPane.setViewportView(pacienteTable);
 
-        jPanel1.add(PacienteScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 510, 210));
+        jPanel1.add(PacienteScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 510, 180));
 
         vacinasTable.setForeground(new java.awt.Color(57, 113, 117));
         vacinasTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -316,35 +282,7 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
         });
         VacinaScrollPane.setViewportView(vacinasTable);
 
-        jPanel1.add(VacinaScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, 540, 210));
-
-        aplicarButton.setBackground(new java.awt.Color(42, 44, 44));
-        aplicarButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-
-        aplicarLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        aplicarLabel.setForeground(new java.awt.Color(57, 113, 117));
-        aplicarLabel.setText("Aplicar");
-        aplicarLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                aplicarLabelMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout aplicarButtonLayout = new javax.swing.GroupLayout(aplicarButton);
-        aplicarButton.setLayout(aplicarButtonLayout);
-        aplicarButtonLayout.setHorizontalGroup(
-            aplicarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, aplicarButtonLayout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(aplicarLabel)
-                .addGap(31, 31, 31))
-        );
-        aplicarButtonLayout.setVerticalGroup(
-            aplicarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(aplicarLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(aplicarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 570, 130, 40));
+        jPanel1.add(VacinaScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, 540, 180));
 
         procurarButton1.setBackground(new java.awt.Color(42, 44, 44));
         procurarButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -382,12 +320,10 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
 
         idLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         idLabel.setForeground(new java.awt.Color(57, 113, 117));
-        idLabel.setText("ID:");
+        idLabel.setText("ID/NOME:");
         idPanel.add(idLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
-        idTextField.setBackground(new java.awt.Color(32, 33, 35));
         idTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        idTextField.setForeground(new java.awt.Color(255, 255, 255));
         idTextField.setToolTipText("");
         idTextField.setBorder(null);
         idTextField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -396,25 +332,81 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
                 idTextFieldActionPerformed(evt);
             }
         });
-        idPanel.add(idTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 350, 30));
+        idPanel.add(idTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 320, 30));
 
         jPanel1.add(idPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, 330, -1));
 
         comentariosPanel.setBackground(new java.awt.Color(32, 33, 35));
         comentariosPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        comentariosLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        comentariosLabel.setForeground(new java.awt.Color(57, 113, 117));
-        comentariosLabel.setText("Comentários:");
-        comentariosPanel.add(comentariosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
-
         comentariosTextArea.setColumns(20);
         comentariosTextArea.setRows(5);
         comentariosScrollPane.setViewportView(comentariosTextArea);
 
-        comentariosPanel.add(comentariosScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 870, 110));
+        comentariosPanel.add(comentariosScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 870, 110));
+
+        cancelarButton.setBackground(new java.awt.Color(229, 90, 90));
+        cancelarButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+
+        cancelarLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        cancelarLabel.setForeground(new java.awt.Color(247, 247, 247));
+        cancelarLabel.setText("Voltar");
+        cancelarLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cancelarLabelMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout cancelarButtonLayout = new javax.swing.GroupLayout(cancelarButton);
+        cancelarButton.setLayout(cancelarButtonLayout);
+        cancelarButtonLayout.setHorizontalGroup(
+            cancelarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cancelarButtonLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(cancelarLabel)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+        cancelarButtonLayout.setVerticalGroup(
+            cancelarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cancelarLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        comentariosPanel.add(cancelarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, -1));
+
+        aplicarButton.setBackground(new java.awt.Color(42, 44, 44));
+        aplicarButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+
+        aplicarLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        aplicarLabel.setForeground(new java.awt.Color(57, 113, 117));
+        aplicarLabel.setText("Aplicar");
+        aplicarLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aplicarLabelMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout aplicarButtonLayout = new javax.swing.GroupLayout(aplicarButton);
+        aplicarButton.setLayout(aplicarButtonLayout);
+        aplicarButtonLayout.setHorizontalGroup(
+            aplicarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, aplicarButtonLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(aplicarLabel)
+                .addGap(31, 31, 31))
+        );
+        aplicarButtonLayout.setVerticalGroup(
+            aplicarButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(aplicarLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        comentariosPanel.add(aplicarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 130, 50));
 
         jPanel1.add(comentariosPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 930, 160));
+
+        comentariosLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        comentariosLabel.setForeground(new java.awt.Color(57, 113, 117));
+        comentariosLabel.setText("Comentários:");
+        jPanel1.add(comentariosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1170, 670));
 
@@ -505,7 +497,7 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
     private void aplicarLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aplicarLabelMouseClicked
         // TODO add your handling code here:
         Date data = new Date(System.currentTimeMillis());
-        Aplicacoes ap = new Aplicacoes(Integer.valueOf(vacina.getId_vacina()), 2, Integer.valueOf(paciente.getId_paciente()), vacina.getNome(), data.toString(), comentariosTextArea.getText());
+        Aplicacoes ap = new Aplicacoes(Integer.valueOf(vacina.getId_vacina()), 1, Integer.valueOf(paciente.getId_paciente()), vacina.getNome(), data.toString(), comentariosTextArea.getText());
         try {
             if (!pacienteTextField.getText().isEmpty() || !vacinaTextField1.getText().isEmpty()) {
                 apDAO.insert(ap);
@@ -591,20 +583,44 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
         DefaultTableModel modelo = (DefaultTableModel) pacienteTable.getModel();
         modelo.setNumRows(0);
         PacienteDAO pdao = new PacienteDAO();
-        for (Paciente p : pdao.getByCpf(Integer.valueOf(cpfTextField1.getText()))) {
-            modelo.addRow(new Object[]{
-                p.getId_paciente(),
-                p.getNome(),
-                p.getCpf(),
-                p.getCidade(),
-                p.getData_nasc()
-            });
+        boolean isNumber = isNumeric(cpfTextField1.getText());
+        if (isNumber) {
+            for (Paciente p : pdao.getByCpf(cpfTextField1.getText())) {
+                modelo.addRow(new Object[]{
+                    p.getId_paciente(),
+                    p.getNome(),
+                    p.getCpf(),
+                    p.getCidade(),
+                    p.getData_nasc()
+                });
+            }
+        } else {
+            for (Paciente p : pdao.getByName(cpfTextField1.getText())) {
+                modelo.addRow(new Object[]{
+                    p.getId_paciente(),
+                    p.getNome(),
+                    p.getCpf(),
+                    p.getCidade(),
+                    p.getData_nasc()
+                });
+            }
+        }
+    }
+    
+    public static boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
         }
     }
 
     private void carregaTabelaById() throws ClassNotFoundException, SQLException {
         DefaultTableModel modelo = (DefaultTableModel) vacinasTable.getModel();
         modelo.setNumRows(0);
+        boolean isNumber = isNumeric(idTextField.getText());
+        if(isNumber){
         for (Vacina v : vdao.getById(Integer.valueOf(idTextField.getText()))) {
             modelo.addRow(new Object[]{
                 v.getId_vacina(),
@@ -613,6 +629,17 @@ public class AplicarVacinaForm extends javax.swing.JFrame {
                 v.getObservacoes()
             });
         }
+        }else{
+        for (Vacina v : vdao.getByNome(idTextField.getText())) {
+            modelo.addRow(new Object[]{
+                v.getId_vacina(),
+                v.getNome(),
+                v.getQuantidade(),
+                v.getObservacoes()
+            });
+        }
+        }
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

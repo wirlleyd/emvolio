@@ -43,15 +43,15 @@ public class PacientesForm extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         pacientesLabel = new javax.swing.JLabel();
-        procurarCpfPanel = new javax.swing.JPanel();
-        jSeparator3 = new javax.swing.JSeparator();
-        procurarCpfFormattedTextField = new javax.swing.JFormattedTextField();
-        procurarCpfLabel = new javax.swing.JLabel();
         procurarPacienteButton = new javax.swing.JPanel();
         procurarLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable_Paciente = new javax.swing.JTable();
         jSeparator8 = new javax.swing.JSeparator();
+        cpfPanel = new javax.swing.JPanel();
+        jSeparator4 = new javax.swing.JSeparator();
+        cpfLabel = new javax.swing.JLabel();
+        procurarCpfFormattedTextField = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         pacienteLabel = new javax.swing.JLabel();
         vacinasLabel = new javax.swing.JLabel();
@@ -75,10 +75,6 @@ public class PacientesForm extends javax.swing.JFrame {
         jSeparator6 = new javax.swing.JSeparator();
         nascimentoLabel = new javax.swing.JLabel();
         nascimentoFormattedTextField = new javax.swing.JTextField();
-        cpfPanel = new javax.swing.JPanel();
-        jSeparator4 = new javax.swing.JSeparator();
-        cpfLabel = new javax.swing.JLabel();
-        cpfFormattedTextField = new javax.swing.JTextField();
         cidadePanel = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         cidadeLabel = new javax.swing.JLabel();
@@ -93,6 +89,10 @@ public class PacientesForm extends javax.swing.JFrame {
         complementoLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        cpfPanel1 = new javax.swing.JPanel();
+        jSeparator10 = new javax.swing.JSeparator();
+        cpfLabel1 = new javax.swing.JLabel();
+        userCpf = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -104,35 +104,6 @@ public class PacientesForm extends javax.swing.JFrame {
         pacientesLabel.setForeground(new java.awt.Color(242, 242, 242));
         pacientesLabel.setText("Pacientes");
         jPanel1.add(pacientesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, -1, -1));
-
-        procurarCpfPanel.setBackground(new java.awt.Color(32, 33, 35));
-        procurarCpfPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        procurarCpfPanel.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 280, -1));
-
-        procurarCpfFormattedTextField.setBackground(new java.awt.Color(32, 33, 35));
-        procurarCpfFormattedTextField.setBorder(null);
-        procurarCpfFormattedTextField.setForeground(new java.awt.Color(255, 255, 255));
-        try {
-            procurarCpfFormattedTextField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        procurarCpfFormattedTextField.setToolTipText("");
-        procurarCpfFormattedTextField.setCaretColor(new java.awt.Color(255, 255, 255));
-        procurarCpfFormattedTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        procurarCpfFormattedTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                procurarCpfFormattedTextFieldActionPerformed(evt);
-            }
-        });
-        procurarCpfPanel.add(procurarCpfFormattedTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 30, 280, 30));
-
-        procurarCpfLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        procurarCpfLabel.setForeground(new java.awt.Color(57, 113, 117));
-        procurarCpfLabel.setText("CPF:");
-        procurarCpfPanel.add(procurarCpfLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
-
-        jPanel1.add(procurarCpfPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 300, -1));
 
         procurarPacienteButton.setBackground(new java.awt.Color(42, 44, 44));
         procurarPacienteButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -230,6 +201,29 @@ public class PacientesForm extends javax.swing.JFrame {
 
         jSeparator8.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 20, 600));
+
+        cpfPanel.setBackground(new java.awt.Color(32, 33, 35));
+        cpfPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        cpfPanel.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 210, -1));
+
+        cpfLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        cpfLabel.setForeground(new java.awt.Color(57, 113, 117));
+        cpfLabel.setText("CPF:");
+        cpfPanel.add(cpfLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
+
+        procurarCpfFormattedTextField.setEditable(false);
+        procurarCpfFormattedTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        procurarCpfFormattedTextField.setToolTipText("");
+        procurarCpfFormattedTextField.setBorder(null);
+        procurarCpfFormattedTextField.setCaretColor(new java.awt.Color(255, 255, 255));
+        procurarCpfFormattedTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                procurarCpfFormattedTextFieldActionPerformed(evt);
+            }
+        });
+        cpfPanel.add(procurarCpfFormattedTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 210, 30));
+
+        jPanel1.add(cpfPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 300, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 570, 670));
 
@@ -364,9 +358,7 @@ public class PacientesForm extends javax.swing.JFrame {
         idPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         idPanel.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 152, -1));
 
-        idFormattedTextField.setBackground(new java.awt.Color(32, 33, 35));
         idFormattedTextField.setBorder(null);
-        idFormattedTextField.setForeground(new java.awt.Color(255, 255, 255));
         idFormattedTextField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
         idFormattedTextField.setToolTipText("");
         idFormattedTextField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -377,7 +369,7 @@ public class PacientesForm extends javax.swing.JFrame {
                 idFormattedTextFieldActionPerformed(evt);
             }
         });
-        idPanel.add(idFormattedTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 30, 150, 30));
+        idPanel.add(idFormattedTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 152, 30));
 
         idLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         idLabel.setForeground(new java.awt.Color(57, 113, 117));
@@ -390,9 +382,8 @@ public class PacientesForm extends javax.swing.JFrame {
         nomePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         nomePanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 440, -1));
 
-        nomeTextField1.setBackground(new java.awt.Color(32, 33, 35));
+        nomeTextField1.setEditable(false);
         nomeTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        nomeTextField1.setForeground(new java.awt.Color(255, 255, 255));
         nomeTextField1.setToolTipText("");
         nomeTextField1.setBorder(null);
         nomeTextField1.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -401,7 +392,7 @@ public class PacientesForm extends javax.swing.JFrame {
                 nomeTextField1ActionPerformed(evt);
             }
         });
-        nomePanel.add(nomeTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 30, 440, 30));
+        nomePanel.add(nomeTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 440, 30));
 
         nomeLabel1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         nomeLabel1.setForeground(new java.awt.Color(57, 113, 117));
@@ -419,9 +410,8 @@ public class PacientesForm extends javax.swing.JFrame {
         nascimentoLabel.setText("Data de nascimento:");
         nascimentoPanel.add(nascimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
-        nascimentoFormattedTextField.setBackground(new java.awt.Color(32, 33, 35));
+        nascimentoFormattedTextField.setEditable(false);
         nascimentoFormattedTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        nascimentoFormattedTextField.setForeground(new java.awt.Color(255, 255, 255));
         nascimentoFormattedTextField.setToolTipText("");
         nascimentoFormattedTextField.setBorder(null);
         nascimentoFormattedTextField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -434,30 +424,6 @@ public class PacientesForm extends javax.swing.JFrame {
 
         jPanel2.add(nascimentoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 190, -1));
 
-        cpfPanel.setBackground(new java.awt.Color(32, 33, 35));
-        cpfPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        cpfPanel.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 152, -1));
-
-        cpfLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        cpfLabel.setForeground(new java.awt.Color(57, 113, 117));
-        cpfLabel.setText("CPF:");
-        cpfPanel.add(cpfLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
-
-        cpfFormattedTextField.setBackground(new java.awt.Color(32, 33, 35));
-        cpfFormattedTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cpfFormattedTextField.setForeground(new java.awt.Color(255, 255, 255));
-        cpfFormattedTextField.setToolTipText("");
-        cpfFormattedTextField.setBorder(null);
-        cpfFormattedTextField.setCaretColor(new java.awt.Color(255, 255, 255));
-        cpfFormattedTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfFormattedTextFieldActionPerformed(evt);
-            }
-        });
-        cpfPanel.add(cpfFormattedTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 160, 30));
-
-        jPanel2.add(cpfPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, 160, -1));
-
         cidadePanel.setBackground(new java.awt.Color(32, 33, 35));
         cidadePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         cidadePanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 300, -1));
@@ -467,9 +433,9 @@ public class PacientesForm extends javax.swing.JFrame {
         cidadeLabel.setText("Cidade:");
         cidadePanel.add(cidadeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
-        cidadeTextField.setBackground(new java.awt.Color(32, 33, 35));
+        cidadeTextField.setEditable(false);
         cidadeTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cidadeTextField.setForeground(new java.awt.Color(255, 255, 255));
+        cidadeTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         cidadeTextField.setToolTipText("");
         cidadeTextField.setBorder(null);
         cidadeTextField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -478,7 +444,7 @@ public class PacientesForm extends javax.swing.JFrame {
                 cidadeTextFieldActionPerformed(evt);
             }
         });
-        cidadePanel.add(cidadeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 320, 30));
+        cidadePanel.add(cidadeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 300, 30));
 
         jPanel2.add(cidadePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 320, -1));
 
@@ -486,9 +452,8 @@ public class PacientesForm extends javax.swing.JFrame {
         ruaPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         ruaPanel.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 300, -1));
 
-        ruaTextField.setBackground(new java.awt.Color(32, 33, 35));
+        ruaTextField.setEditable(false);
         ruaTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        ruaTextField.setForeground(new java.awt.Color(255, 255, 255));
         ruaTextField.setToolTipText("");
         ruaTextField.setBorder(null);
         ruaTextField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -497,7 +462,7 @@ public class PacientesForm extends javax.swing.JFrame {
                 ruaTextFieldActionPerformed(evt);
             }
         });
-        ruaPanel.add(ruaTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 30, 300, 30));
+        ruaPanel.add(ruaTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 302, 30));
 
         ruaLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         ruaLabel.setForeground(new java.awt.Color(57, 113, 117));
@@ -510,9 +475,8 @@ public class PacientesForm extends javax.swing.JFrame {
         complementoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         complementoPanel.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 225, -1));
 
-        complementoTextField.setBackground(new java.awt.Color(32, 33, 35));
+        complementoTextField.setEditable(false);
         complementoTextField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        complementoTextField.setForeground(new java.awt.Color(255, 255, 255));
         complementoTextField.setToolTipText("");
         complementoTextField.setBorder(null);
         complementoTextField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -521,7 +485,7 @@ public class PacientesForm extends javax.swing.JFrame {
                 complementoTextFieldActionPerformed(evt);
             }
         });
-        complementoPanel.add(complementoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 30, 225, 30));
+        complementoPanel.add(complementoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 225, 30));
 
         complementoLabel.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         complementoLabel.setForeground(new java.awt.Color(57, 113, 117));
@@ -576,14 +540,33 @@ public class PacientesForm extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 490, 640, 100));
 
+        cpfPanel1.setBackground(new java.awt.Color(32, 33, 35));
+        cpfPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        cpfPanel1.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, 152, -1));
+
+        cpfLabel1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        cpfLabel1.setForeground(new java.awt.Color(57, 113, 117));
+        cpfLabel1.setText("CPF:");
+        cpfPanel1.add(cpfLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
+
+        userCpf.setEditable(false);
+        userCpf.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        userCpf.setToolTipText("");
+        userCpf.setBorder(null);
+        userCpf.setCaretColor(new java.awt.Color(255, 255, 255));
+        userCpf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userCpfActionPerformed(evt);
+            }
+        });
+        cpfPanel1.add(userCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 150, 30));
+
+        jPanel2.add(cpfPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, 160, -1));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void procurarCpfFormattedTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_procurarCpfFormattedTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_procurarCpfFormattedTextFieldActionPerformed
 
     private void nomeTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTextField1ActionPerformed
         // TODO add your handling code here:
@@ -620,7 +603,7 @@ public class PacientesForm extends javax.swing.JFrame {
             nomeTextField1.setText(paciente.getNome());
             nascimentoFormattedTextField.setText(paciente.getData_nasc());
             cidadeTextField.setText(paciente.getCidade());
-            cpfFormattedTextField.setText(String.valueOf(paciente.getCpf()));
+            procurarCpfFormattedTextField.setText(String.valueOf(paciente.getCpf()));
             ruaTextField.setText(paciente.getRua());
             complementoTextField.setText(paciente.getComplemento());
         }
@@ -635,13 +618,13 @@ public class PacientesForm extends javax.swing.JFrame {
 
     private void novoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_novoLabelMouseClicked
         // TODO add your handling code here:
-        idFormattedTextField.setText("");
-        nomeTextField1.setText("");
-        nascimentoFormattedTextField.setText("");
-        cidadeTextField.setText("");
-        cpfFormattedTextField.setText("");
-        ruaTextField.setText("");
-        complementoTextField.setText("");
+        idFormattedTextField.setEditable(true);
+        nomeTextField1.setEditable(true);
+        nascimentoFormattedTextField.setEditable(true);
+        cidadeTextField.setEditable(true);
+        procurarCpfFormattedTextField.setEditable(true);
+        ruaTextField.setEditable(true);
+        complementoTextField.setEditable(true);
         paciente = new Paciente();
     }//GEN-LAST:event_novoLabelMouseClicked
 
@@ -663,14 +646,13 @@ public class PacientesForm extends javax.swing.JFrame {
 
     private void salvarLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salvarLabelMouseClicked
         Paciente p = new Paciente(nomeTextField1.getText(), cidadeTextField.getText(), ruaTextField.getText(),
-                complementoTextField.getText(), nascimentoFormattedTextField.getText(), cpfFormattedTextField.getText());
+                complementoTextField.getText(), nascimentoFormattedTextField.getText(), procurarCpfFormattedTextField.getText());
         PacienteDAO pdao = new PacienteDAO();
-        System.out.println(p.toString());
+        System.out.println(userCpf.getText().length());
         try {
-            if(cpfFormattedTextField.getText().length() != 11){
+            if (userCpf.getText().length() != 11) {
                 JOptionPane.showMessageDialog(null, "Por favor, preencha um cpf válido!");
-            }
-            else if (nomeTextField1.getText().isEmpty() || cpfFormattedTextField.getText().isEmpty()) {
+            } else if (nomeTextField1.getText().isEmpty() || userCpf.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Por favor, preencha os campos corretamente!");
             } else if (idFormattedTextField.getText().isEmpty()) {
                 pdao.insert(p);
@@ -683,7 +665,7 @@ public class PacientesForm extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Registro Atualizado!");
                 clearFields();
                 carregaTabela();
-            } 
+            }
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(PacientesForm.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -706,13 +688,17 @@ public class PacientesForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_procurarLabelMouseClicked
 
-    private void cpfFormattedTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfFormattedTextFieldActionPerformed
+    private void procurarCpfFormattedTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_procurarCpfFormattedTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cpfFormattedTextFieldActionPerformed
+    }//GEN-LAST:event_procurarCpfFormattedTextFieldActionPerformed
 
     private void nascimentoFormattedTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nascimentoFormattedTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nascimentoFormattedTextFieldActionPerformed
+
+    private void userCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userCpfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userCpfActionPerformed
 
     /**
      * @param args the command line arguments
@@ -785,7 +771,7 @@ public class PacientesForm extends javax.swing.JFrame {
         nomeTextField1.setText("");
         nascimentoFormattedTextField.setText("");
         cidadeTextField.setText("");
-        cpfFormattedTextField.setText("");
+        procurarCpfFormattedTextField.setText("");
         ruaTextField.setText("");
         complementoTextField.setText("");
     }
@@ -794,17 +780,38 @@ public class PacientesForm extends javax.swing.JFrame {
         DefaultTableModel modelo = (DefaultTableModel) jTable_Paciente.getModel();
         modelo.setNumRows(0);
         PacienteDAO pdao = new PacienteDAO();
-        for (Paciente p : pdao.getByCpf(Integer.valueOf(procurarCpfFormattedTextField.getText()))) {
-            modelo.addRow(new Object[]{
-                p.getId_paciente(),
-                p.getNome(),
-                p.getCpf(),
-                p.getCidade(),
-                p.getData_nasc()
-            });
+        boolean isNumber = isNumeric(procurarCpfFormattedTextField.getText());
+        if (isNumber) {
+            for (Paciente p : pdao.getByCpf(procurarCpfFormattedTextField.getText())) {
+                modelo.addRow(new Object[]{
+                    p.getId_paciente(),
+                    p.getNome(),
+                    p.getCpf(),
+                    p.getCidade(),
+                    p.getData_nasc()
+                });
+            }
+        } else {
+            for (Paciente p : pdao.getByName(procurarCpfFormattedTextField.getText())) {
+                modelo.addRow(new Object[]{
+                    p.getId_paciente(),
+                    p.getNome(),
+                    p.getCpf(),
+                    p.getCidade(),
+                    p.getData_nasc()
+                });
+            }
         }
     }
 
+    public static boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel cancelarButton;
     private javax.swing.JLabel cancelarLabel;
@@ -814,9 +821,10 @@ public class PacientesForm extends javax.swing.JFrame {
     private javax.swing.JLabel complementoLabel;
     private javax.swing.JPanel complementoPanel;
     private javax.swing.JTextField complementoTextField;
-    private javax.swing.JTextField cpfFormattedTextField;
     private javax.swing.JLabel cpfLabel;
+    private javax.swing.JLabel cpfLabel1;
     private javax.swing.JPanel cpfPanel;
+    private javax.swing.JPanel cpfPanel1;
     private javax.swing.JFormattedTextField idFormattedTextField;
     private javax.swing.JLabel idLabel;
     private javax.swing.JPanel idPanel;
@@ -825,8 +833,8 @@ public class PacientesForm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
@@ -845,9 +853,7 @@ public class PacientesForm extends javax.swing.JFrame {
     private javax.swing.JLabel novoLabel;
     private javax.swing.JLabel pacienteLabel;
     private javax.swing.JLabel pacientesLabel;
-    private javax.swing.JFormattedTextField procurarCpfFormattedTextField;
-    private javax.swing.JLabel procurarCpfLabel;
-    private javax.swing.JPanel procurarCpfPanel;
+    private javax.swing.JTextField procurarCpfFormattedTextField;
     private javax.swing.JLabel procurarLabel;
     private javax.swing.JPanel procurarPacienteButton;
     private javax.swing.JPanel removerButton;
@@ -857,6 +863,7 @@ public class PacientesForm extends javax.swing.JFrame {
     private javax.swing.JTextField ruaTextField;
     private javax.swing.JPanel salvarButton;
     private javax.swing.JLabel salvarLabel;
+    private javax.swing.JTextField userCpf;
     private javax.swing.JLabel vacinasLabel;
     // End of variables declaration//GEN-END:variables
 }
