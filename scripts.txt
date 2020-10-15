@@ -1,23 +1,23 @@
 CREATE TABLE paciente (
-	id_paciente int, 
+	id_paciente int auto_increment, 
     nome VARCHAR(20),
 	cidade VARCHAR(20), 
     rua VARCHAR(20),
     complemento VARCHAR(20),
     data_nascimento date,
-    cpf int,
+    cpf VARCHAR(20),
 	primary key(id_paciente)
 );
 
 CREATE TABLE agente (
-	id_paciente int, 
+	id_paciente int auto_increment, 
     id_agente int, 
 	primary key(id_agente),
     foreign key (id_paciente) references paciente(id_paciente)
 );
 
 CREATE TABLE login (
-	id_login int,
+	id_login int auto_increment,
     id_agente int, 
     senha VARCHAR(20),
     id VARCHAR(20),
@@ -26,7 +26,7 @@ CREATE TABLE login (
 );
 
 CREATE TABLE vacina (
-	id_vacina int, 
+	id_vacina int auto_increment, 
     nome VARCHAR(20),
     quantidade int, 
     observacoes VARCHAR(20),
